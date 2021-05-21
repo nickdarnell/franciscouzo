@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
   ctx.canvas.width  = max_width;
   ctx.canvas.height = max_height;
 
-  ctx.fillStyle = "white";
+  ctx.fillStyle = "#00000000";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
 
   var img_canvas = document.createElement('canvas');
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
   img_ctx.canvas.width  = max_width;
   img_ctx.canvas.height = max_height;
 
-  img_ctx.fillStyle = "white";
+  img_ctx.fillStyle = "#00000000";
   img_ctx.fillRect(0, 0, canvas.width, canvas.height);
 
   var svg_elements = [];
@@ -107,9 +107,9 @@ document.addEventListener('DOMContentLoaded', function() {
       })
     },
     clear: function() {
-      ctx.fillStyle = "white";
+      ctx.fillStyle = "#00000000";
       ctx.fillRect(0, 0, canvas.width, canvas.height);
-      img_ctx.fillStyle = "white";
+      img_ctx.fillStyle = "#00000000";
       img_ctx.fillRect(0, 0, canvas.width, canvas.height);
     },
     stop: function() {
