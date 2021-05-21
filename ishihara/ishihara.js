@@ -15,7 +15,8 @@ document.addEventListener('DOMContentLoaded', function() {
   ctx.canvas.width  = max_width;
   ctx.canvas.height = max_height;
 
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = "white";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
 
   var img_canvas = document.createElement('canvas');
   var img_ctx = img_canvas.getContext('2d');
@@ -23,7 +24,8 @@ document.addEventListener('DOMContentLoaded', function() {
   img_ctx.canvas.width  = max_width;
   img_ctx.canvas.height = max_height;
 
-  img_ctx.clearRect(0, 0, canvas.width, canvas.height);
+  img_ctx.fillStyle = "white";
+  img_ctx.fillRect(0, 0, canvas.width, canvas.height);
 
   var svg_elements = [];
   var worker;
@@ -65,6 +67,8 @@ document.addEventListener('DOMContentLoaded', function() {
       hide_gui_element(gui, 'stop', false);
 
       generating = true;
+      
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       var img_data = img_ctx.getImageData(0, 0, canvas.width, canvas.height);
       ctx.fillStyle = ishihara_input.background_color;
@@ -105,8 +109,10 @@ document.addEventListener('DOMContentLoaded', function() {
       })
     },
     clear: function() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      img_ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = "white";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      img_ctx.fillStyle = "white";
+      img_ctx.fillRect(0, 0, canvas.width, canvas.height);
     },
     stop: function() {
       if (worker) {
