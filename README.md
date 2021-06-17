@@ -1,3 +1,3 @@
-# [franciscouzo.github.io](https://franciscouzo.github.io)
+# [https://nickdarnell.github.io/franciscouzo/](https://nickdarnell.github.io/franciscouzo/)
 
-This is my personal webpage that I mainly use for uploading HTML5 demos, you can find the live version [here](https://franciscouzo.github.io/).
+Forked version from [https://franciscouzo.github.io/](https://franciscouzo.github.io/), needed to add a transparent background option.
